@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block titulo %}StudyIA{% endblock %}</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="container">
+
+            <a href="{{ url_for('inicio') }}" class="logo">
+                StudyIA
+            </a>
+
+            <nav class="navegacao">
+
+                <a href="{{ url_for('inicio') }}">
+                    Início
+                </a>
+
+                <a href="{{ url_for('avaliacao') }}">
+                    Avaliação
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="container conteudo">
+
+        {% block conteudo %}
+        {% endblock %}
+
+    </main>
+
+    <footer class="rodape">
+
+        <p>
+            StudyIA - Assistente inteligente de estudos
+        </p>
+
+    </footer>
+
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+
+</html>

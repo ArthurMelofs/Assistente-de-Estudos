@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+
+{% block titulo %}
+Resultado | StudyIA
+{% endblock %}
+
+{% block conteudo %}
+
+<section class="secao">
+
+    <h1>Seu diagnóstico</h1>
+
+    <p>
+        Confira seu desempenho na avaliação inicial.
+    </p>
+
+    <div id="resumo-resultado" class="resumo-resultado">
+        Carregando resultado...
+    </div>
+
+</section>
+
+
+<section class="secao">
+
+    <h2>Desempenho por conteúdo</h2>
+
+    <div id="desempenho" class="grade-cards"></div>
+
+</section>
+
+
+<section class="secao">
+
+    <h2>Conteúdos recomendados para reforço</h2>
+
+    <p>
+        Selecione um conteúdo para gerar exercícios
+        personalizados com inteligência artificial.
+    </p>
+
+    <div id="lista-reforcos" class="lista-reforcos"></div>
+
+</section>
+
+
+<section class="secao" id="secao-exercicios" hidden>
+
+    <h2>Exercícios personalizados</h2>
+
+    <p id="informacao-reforco"></p>
+
+    <div id="area-reforco"></div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script
+    src="{{ url_for('static', filename='js/resultado.js') }}"
+></script>
+
+{% endblock %}

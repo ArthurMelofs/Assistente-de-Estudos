@@ -1,0 +1,78 @@
+
+{% extends "base.html" %}
+
+{% block titulo %}
+Início | StudyIA
+{% endblock %}
+
+{% block conteudo %}
+
+<section class="apresentacao">
+
+    <span class="etiqueta">
+        Assistente de estudos
+    </span>
+
+    <h1>
+        Aprenda no seu ritmo com o StudyIA
+    </h1>
+
+    <p>
+        Identifique suas dificuldades, acompanhe seu desempenho
+        e pratique com exercícios personalizados gerados por
+        inteligência artificial.
+    </p>
+
+    <a href="{{ url_for('avaliacao') }}" class="botao">
+        Começar avaliação
+    </a>
+
+</section>
+
+
+<section class="secao">
+
+    <h2>Como funciona?</h2>
+
+    <div class="grade-cards">
+
+        <article class="card">
+
+            <h3>01. Avaliação</h3>
+
+            <p>
+                Responda questões de Matemática e Português
+                para identificar seu conhecimento atual.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>02. Diagnóstico</h3>
+
+            <p>
+                Consulte seu desempenho geral e identifique
+                os conteúdos que precisam de atenção.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>03. Reforço com IA</h3>
+
+            <p>
+                Pratique com novos exercícios gerados de
+                acordo com suas dificuldades.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+
+{% extends "base.html" %}
+
+{% block titulo %}
+Avaliação | StudyIA
+{% endblock %}
+
+{% block conteudo %}
+
+<section class="secao">
+
+    <h1>Avaliação inicial</h1>
+
+    <p>
+        Responda às questões para que possamos identificar
+        seu nível de conhecimento.
+    </p>
+
+    <div class="campo-nome">
+
+        <label for="nome-estudante">
+            Nome do estudante
+        </label>
+
+        <input
+            type="text"
+            id="nome-estudante"
+            placeholder="Digite seu nome"
+        >
+
+    </div>
+
+
+    <div class="progresso-container">
+
+        <div class="progresso-info">
+
+            <span id="contador">
+                Questão 0 de 0
+            </span>
+
+            <span id="porcentagem">
+                0%
+            </span>
+
+        </div>
+
+        <div class="barra-fundo">
+
+            <div
+                class="barra-progresso"
+                id="barra-progresso"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <div id="area-questao" class="area-questao">
+
+        <p>
+            Carregando questões...
+        </p>
+
+    </div>
+
+
+    <div class="botoes-navegacao">
+
+        <button
+            type="button"
+            id="botao-anterior"
+            class="botao-secundario"
+            disabled
+        >
+            Anterior
+        </button>
+
+        <button
+            type="button"
+            id="botao-proximo"
+            class="botao"
+        >
+            Próxima
+        </button>
+
+        <button
+            type="button"
+            id="botao-finalizar"
+            class="botao"
+            hidden
+        >
+            Finalizar avaliação
+        </button>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script
+    src="{{ url_for('static', filename='js/avaliacao.js') }}"
+></script>
+
+{% endblock %}

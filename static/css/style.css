@@ -1,0 +1,345 @@
+
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #F0F0F2;
+    color: #032059;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.secao {
+    margin: 45px 0;
+}
+
+
+/* Cabeçalho */
+
+.cabecalho {
+    background-color: #032059;
+    padding: 18px 0;
+}
+
+.cabecalho .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #F0F0F2;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navegacao {
+    display: flex;
+    gap: 25px;
+}
+
+.navegacao a {
+    color: #F0F0F2;
+    text-decoration: none;
+}
+
+.navegacao a:hover {
+    color: #04C4D9;
+}
+
+
+/* Conteúdo principal */
+
+.conteudo {
+    min-height: 75vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.apresentacao {
+    padding: 65px 35px;
+    margin-top: 25px;
+    background-color: #032059;
+    color: #F0F0F2;
+    border-radius: 12px;
+}
+
+.apresentacao h1 {
+    max-width: 650px;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.apresentacao p {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    color: #04C4D9;
+    font-weight: bold;
+}
+
+
+/* Botões */
+
+.botao {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    background-color: #04C4D9;
+    color: #032059;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background-color: #2C4373;
+    color: #F0F0F2;
+}
+
+.botao:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.botao-secundario {
+    padding: 12px 22px;
+    border: 1px solid #818AA6;
+    border-radius: 7px;
+    background-color: transparent;
+    color: #032059;
+}
+
+.botao-secundario:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Cards */
+
+.grade-cards {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 20px;
+}
+
+.card {
+    padding: 22px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #d9dce5;
+    box-shadow: 0 3px 10px rgba(3, 32, 89, 0.05);
+}
+
+.card h3 {
+    color: #2C4373;
+}
+
+
+/* Campo de nome */
+
+.campo-nome {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 25px 0;
+}
+
+.campo-nome input {
+    padding: 12px;
+    border: 1px solid #818AA6;
+    border-radius: 6px;
+}
+
+
+/* Progresso */
+
+.progresso-container {
+    margin: 25px 0;
+}
+
+.progresso-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.barra-fundo {
+    height: 10px;
+    overflow: hidden;
+    background-color: #d9dce5;
+    border-radius: 20px;
+}
+
+.barra-progresso {
+    width: 0;
+    height: 100%;
+    background-color: #04C4D9;
+    transition: width 0.3s;
+}
+
+
+/* Questões */
+
+.area-questao {
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #d9dce5;
+}
+
+.pergunta {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.alternativa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #d9dce5;
+    border-radius: 7px;
+    background-color: white;
+    color: #032059;
+    text-align: left;
+}
+
+.alternativa:hover {
+    border-color: #04C4D9;
+    background-color: #f4fdff;
+}
+
+.alternativa input {
+    accent-color: #04C4D9;
+}
+
+.alternativa:disabled {
+    cursor: not-allowed;
+}
+
+
+/* Navegação da avaliação */
+
+.botoes-navegacao {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+/* Resultados */
+
+.resumo-resultado {
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 5px solid #04C4D9;
+}
+
+.lista-reforcos {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 20px;
+}
+
+
+/* Exercícios gerados pela IA */
+
+#area-reforco {
+    padding: 25px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #d9dce5;
+}
+
+#area-reforco .alternativa {
+    cursor: pointer;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* Rodapé */
+
+.rodape {
+    padding: 20px;
+    background-color: #032059;
+    color: #F0F0F2;
+    text-align: center;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .cabecalho .container {
+        flex-direction: column;
+    }
+
+    .navegacao {
+        gap: 18px;
+    }
+
+    .apresentacao {
+        padding: 35px 20px;
+    }
+
+    .apresentacao h1 {
+        font-size: 28px;
+    }
+
+    .botoes-navegacao {
+        flex-wrap: wrap;
+    }
+
+    .botoes-navegacao button {
+        flex: 1;
+    }
+
+}
